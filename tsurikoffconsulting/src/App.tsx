@@ -1,37 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
-import { Button } from './components/button';
+import { Header } from './components/header/Header';
+import { Main } from './components/main/Main';
+
+import ScrollToTop from './components/scrollToTop/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* Header */}
-        Logo
-        <Button name={"Book Introduction call"} />
-        {/* Links */}
-        <ul>
-          <li>About Us | </li>
-          <li>Services | </li>
-          <li>Key Technologies | </li>
-          <li>Pricing | </li>
-          <li>Contact Us</li>
-        </ul>
-      </header>
+    
+      <ScrollToTop />
+      
+      <Header />
+      
+      {/* <Main /> */}
 
       <body>
         {/* Sections */}
 
 
         {/* About Us */}
-        <div className="content-light container">
+        <div className="content-light container" id="aboutUs">
           <h1>About us</h1>
           
         </div>
 
         {/* Services */}
-        <div className="content-dark container">
+        <div className="content-dark container" id="services">
           <h1>Services</h1>
           
           Inventory management 
@@ -46,17 +41,17 @@ function App() {
         </div>
         
         {/* Key Technologies */}
-        <div className="content-light container">
+        <div className="content-light container" id="keyTechnologies">
           <h1>Key Technologies</h1>
         </div>
 
         {/* Pricing */}
-        <div className="content-dark container">
+        <div className="content-dark container" id="pricing">
           <h1>Pricing</h1>
         </div>
 
         {/* Contact Us */}
-        <div className="content-light container">
+        <div className="content-light container" id="contactUs">
           <h1>Contact Us</h1>
         </div>
 

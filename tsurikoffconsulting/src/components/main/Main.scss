@@ -1,0 +1,230 @@
+@import './../../style/variables.scss';
+
+.main {
+    height: 500px;
+    width: 100%;
+    background-color: #827d7d;
+    // background-image: url('./../img/backgroundImage.jpg');
+    background-size: cover;
+    background-position: center;
+}
+// .particles {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     opacity: 0.2;
+// }
+.profileImage img {
+    position: absolute;
+    right: 250px;
+    bottom: 0;
+    z-index: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.text {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    color: white;
+    font-size: 1.5em;
+    font-family: $primaryFontFamily;
+}
+.photoDiv {
+    position: relative;
+    border: 3px solid rgb(58, 143, 223);
+    opacity: 0.8;
+    width: 290px;
+    padding-bottom: 20px;
+
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 2.6em;
+    font-weight: 400;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    -webkit-text-fill-color: rgba(145, 145, 145, 0);
+    margin-bottom: 15px;
+}
+.softwareDeveloper {
+    font-size: 2.6em;
+    font-weight: 700;
+    font-family: $primaryFontFamily;
+    margin-bottom: 60px;
+}
+.basedInCanada {
+    font-size: 1.4em;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+.spacing {
+    height: 30px;
+}
+
+.button {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    font-family: $primaryFontFamily;
+    width: 230px;
+    height: 60px;
+    border: 2px solid white;
+    transition: all 0.9s ease;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: $primaryTextColor;
+    color: $textColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    border: 1px solid white;
+    transition: all 0.9s ease;
+}
+
+@keyframes typing {
+    from {
+        width: 50px;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .profileImage img {
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        height: 90vh;
+        z-index: 0;
+    }
+    .text {
+        z-index: 1;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .main {
+        background-blend-mode: overlay;
+    }
+    .profileImage img {
+        display: none;
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        height: 90vh;
+    }
+}
+@media screen and (max-width: 900px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .button {
+        margin: 40px auto;
+    }
+    .text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+}
+@media screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .text {
+        font-size: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .text {
+        font-size: 0.8em;
+    }
+    .button {
+        margin: 40px auto;
+        font-size: 1.5em;
+    }
+}

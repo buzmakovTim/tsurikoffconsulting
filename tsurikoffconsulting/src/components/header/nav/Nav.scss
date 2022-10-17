@@ -1,0 +1,190 @@
+@import './../../../style/variables.scss';
+
+.navContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    // position: absolute;
+    // font-size: 0.6em;
+
+    .nav {
+        width: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        margin-right: 0px;
+        & a {
+            color: $textColor;
+            text-decoration: none;
+            font-family: $primary-font;
+            font-weight: 500;
+            height: 25px;
+
+            --border-color: rgb(186, 9, 9);
+            --border-width: 3px;
+            --bottom-distance: 0px; /* you can increase this */
+
+            display: inline-block;
+            background-image: linear-gradient(
+                var(--border-color),
+                var(--border-color)
+            );
+            background-size: 0% var(--border-width);
+            background-repeat: no-repeat;
+            transition: background-size 0.3s;
+            background-position: 0 calc(100% - var(--bottom-distance));
+
+            &:hover {
+                color: rgb(190, 190, 190);
+                cursor: pointer;
+            }
+        } // a end
+
+        .current {
+            background-size: 100% var(--border-width);
+        }
+
+        @media screen and (max-width: 900px) {
+            padding: 0;
+            min-width: 100%;
+            width: 300px;
+            margin: 0 auto;
+            justify-content: space-evenly;
+        }
+        @media screen and (max-width: 600px) {
+            width: 500px;
+            display: none;
+            // min-width: 100%;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            a {
+                height: 45px;
+                width: 100%;
+                color: white;
+                text-decoration: none;
+                border-bottom: 1px solid rgb(48, 48, 48);
+                font-family: 'Quicksand', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(58, 143, 223);
+                    cursor: pointer;
+                }
+            }
+        }
+    } // NAV End
+
+    .navShow {
+        position: absolute;
+        top: 30px;
+        background-color: rgba(104, 159, 183, 0.932);
+        & a {
+            width: 100%;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            height: 25px;
+
+            --border-color: rgb(58, 143, 223);
+            --border-width: 3px;
+            --bottom-distance: 0px; /* you can increase this */
+
+            display: inline-block;
+            background-image: linear-gradient(
+                var(--border-color),
+                var(--border-color)
+            );
+            background-size: 0% var(--border-width);
+            background-repeat: no-repeat;
+            transition: background-size 0.3s;
+            background-position: 0 calc(100% - var(--bottom-distance));
+
+            &:hover {
+                color: rgb(190, 190, 190);
+                cursor: pointer;
+            }
+        } // a end
+
+        .current {
+            background-size: 100% var(--border-width);
+        }
+
+        @media screen and (max-width: 600px) {
+            min-width: 100%;
+            padding: 0;
+
+            a {
+                z-index: 0;
+                height: 55px;
+                width: 100%;
+                color: rgb(255, 250, 250);
+                text-decoration: none;
+                border-bottom: 1px solid rgb(48, 48, 48);
+                font-family: 'Roboto', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(58, 143, 223);
+                    cursor: pointer;
+                    // transition: all 0.5s ease;
+                }
+            }
+        }
+    } // NavShow End
+
+    @media screen and (max-width: 900px) {
+        margin: 0 auto;
+        justify-content: space-evenly;
+    }
+
+    // Mobile menu button start
+    .showMenuButton {
+        display: none;
+        margin-right: 30px;
+        width: 35px;
+        height: 35px;
+        border: 1px $primaryTextColor solid;
+        border-radius: 20%;
+
+        img {
+            width: 20px;
+            height: 20px;
+            opacity: 0.5;
+        }
+        &:hover {
+            border: 1px white solid;
+            cursor: pointer;
+        }
+        &:hover img {
+            opacity: 1;
+        }
+
+        // Mobile menu button show
+        @media screen and (max-width: 600px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    } // Mobile menu button end
+
+    @media screen and (max-width: 600px) {
+        justify-content: flex-end;
+        position: absolute;
+    }
+    @media screen and (max-width: 600px) {
+        min-width: 100%;
+    }
+}
