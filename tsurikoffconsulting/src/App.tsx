@@ -1,11 +1,26 @@
 import React from 'react';
 import './App.scss';
 import { Header } from './components/header/Header';
-import { Main } from './components/main/Main';
 
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
+import { Section } from './components/section/Section';
+import { StateType } from './state/State';
 
-function App() {
+type AppPropsType = {
+  state: StateType
+}
+
+function App(props: AppPropsType) {
+  
+  const sections = props.state.sections.map( (section, index)  => {
+    return (
+      <>
+        <Section section={section} index={index}/>
+      </>
+    )
+  })
+  
+
   return (
     <div className="App">
     
@@ -16,44 +31,9 @@ function App() {
       {/* <Main /> */}
 
       <body>
-        {/* Sections */}
-
-
-        {/* About Us */}
-        <div className="content-light container" id="aboutUs">
-          <h1>About us</h1>
-          
-        </div>
-
-        {/* Services */}
-        <div className="content-dark container" id="services">
-          <h1>Services</h1>
-          
-          Inventory management 
-          Budgeting 
-          Bookkeeping for start-ups, small to medium size businesses 
-          Bookkeeping 
-          Payroll services 
-          Back office services 
-          GST/PST filing 
-          Management reports 
-          Work Safe BC filings
-        </div>
         
-        {/* Key Technologies */}
-        <div className="content-light container" id="keyTechnologies">
-          <h1>Key Technologies</h1>
-        </div>
-
-        {/* Pricing */}
-        <div className="content-dark container" id="pricing">
-          <h1>Pricing</h1>
-        </div>
-
-        {/* Contact Us */}
-        <div className="content-light container" id="contactUs">
-          <h1>Contact Us</h1>
-        </div>
+        {/* render sections */}
+        {sections}
 
       </body>
 
