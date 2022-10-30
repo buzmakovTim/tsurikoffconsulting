@@ -1,0 +1,27 @@
+.outer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: aqua;
+    // justify-content: space-between;
+}
+.photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 50px;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    // margin-right: 50px;
+}

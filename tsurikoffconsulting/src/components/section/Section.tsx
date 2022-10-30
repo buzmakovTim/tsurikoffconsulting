@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react'
-import { SectionType } from '../../state/State'
+import { PriceType, SectionType } from '../../state/State'
 import { AboutUs } from '../aboutUs/AboutUs';
+import { Pricing } from '../pricing/Pricing';
 import './Section.scss';
 
 type SectionPropsType = {
@@ -32,6 +33,10 @@ export const Section = (props: SectionPropsType) => {
           )
         })
       )}
+
+      if(props.section.title === 'Pricing'){
+        content = <Pricing pricing={props.section.content as PriceType[]}/>
+      }
       
       return content
     }
