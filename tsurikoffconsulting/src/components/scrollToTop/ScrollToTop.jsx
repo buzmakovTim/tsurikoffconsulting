@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Reveal from 'react-reveal/Reveal';
 import './ScrollToTop.scss'
 import  arrowUp from './../../img/arrow-up.svg' 
 
@@ -33,11 +32,11 @@ export default function ScrollToTop() {
   return (
     <>
       {isVisible && (
-        <Reveal effect="fadeInUp">
+        // <Reveal effect="fadeInUp">
           <div onClick={scrollToTop} className="totop">
             <img src={arrowUp} alt="scroll up" />
           </div>
-        </Reveal>
+        // </Reveal>
     )}
     </>
   );
