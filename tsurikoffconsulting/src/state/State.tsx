@@ -11,12 +11,14 @@ export type SectionType = {
 type ContentType = string[] | PriceType[]
 export type PriceTitleType = 'START-UP' | 'GROWING' | 'ESTABLISHED' | 'FULL TIME' | 'PART TIME' | 'HOURLY'
 type RateType = 'Monthly Rate' | 'Hourly Rate'
+type CategoryType = 'Cash Basis' | 'Accrual Basis'
 
 export type PriceType = {
     title: PriceTitleType
     rateType: RateType
     rate: string
     prepaid: string
+    category?: CategoryType
     sectionOne?: string[]
     sectionTwo?: string[]
 }
@@ -34,6 +36,7 @@ const pricingData: PriceType[] = [
         rateType: 'Monthly Rate',
         rate: '$100/mo',
         prepaid: 'Prepaid Annually or $110/mo',
+        category: 'Cash Basis',
         sectionOne: ['Up to 20 Transactions Choose 1 add-on'],
         sectionTwo: ['Payroll Bookkeeping', 'Tracking multiple revenue', 'Tracking reimbursement to clients or employees', 'Accounting for loans, leases, or lines of credit']   
     },
@@ -42,6 +45,7 @@ const pricingData: PriceType[] = [
         rateType: 'Monthly Rate',
         rate: '$125/mo',
         prepaid: 'Prepaid Annually or $140/mo',
+        category: 'Cash Basis',
         sectionOne: ['Up to 50 Transactions Choose 3 add-ons'],
         sectionTwo: ['Payroll Bookkeeping', 'Tracking multiple revenue', 'Tracking reimbursement to clients or employees', 'Accounting for loans, leases, or lines of credit']   
     },
@@ -50,6 +54,7 @@ const pricingData: PriceType[] = [
         rateType: 'Monthly Rate',
         rate: '$150/mo',
         prepaid: 'Prepaid Annually or $175/mo',
+        category: 'Cash Basis',
         sectionOne: ['Up to 100 Transactions Choose 4 add-ons'],
         sectionTwo: ['Payroll Bookkeeping', 'Tracking multiple revenue', 'Tracking reimbursement to clients or employees', 'Accounting for loans, leases, or lines of credit']   
     },
@@ -58,6 +63,7 @@ const pricingData: PriceType[] = [
         rateType: 'Monthly Rate',
         rate: '$250/mo',
         prepaid: 'Prepaid Annually or $270/mo',
+        category: 'Accrual Basis',
         sectionOne: ['Up to 50 Transactions', 'Monthly Bookkeeping', 'Annual Financial Statements', 'Annual Financial Review', 'Monthly Bank and Credit Card Reconciliation', 'HST Filing'],
         sectionTwo: ['Cloud Storage for Documents', 'Payroll Processing - Up to 2 Employees', 'Unlimited Support', 'QBO, Xero, Wave or Freshbooks', 'Setup & Training', '-', '-']   
     },
@@ -66,6 +72,7 @@ const pricingData: PriceType[] = [
         rateType: 'Monthly Rate',
         rate: '$400/mo',
         prepaid: 'Prepaid Annually or $430/mo',
+        category: 'Accrual Basis',
         sectionOne: ['Up to 100 Transactions', 'Bi-Weekly Bookkeeping', 'Semi-Annual Financial Statements', 'Semi-Annual Financial Review', 'Monthly Bank and Credit Card Reconciliation', 'HST Filing'],
         sectionTwo: ['Cloud Storage for Documents', 'Payroll Processing - Up to 5 Employees', 'Unlimited Support', 'QBO, Xero, Wave or Freshbooks', 'Setup & Training', 'A/R & A/P Processing', 'Additional Financial Reports']   
     },
@@ -74,6 +81,7 @@ const pricingData: PriceType[] = [
         rateType: 'Monthly Rate',
         rate: '$550/mo',
         prepaid: 'Prepaid Annually or $600/mo',
+        category: 'Accrual Basis',
         sectionOne: ['Up to 150 Transactions', 'Weekly Bookkeeping', 'Quarterly Financial Statements', 'Quarterly Financial Review', 'Monthly Bank and Credit Card Reconciliation', 'HST Filing'],
         sectionTwo: ['Cloud Storage for Documents', 'Payroll Processing - Up to 10 Employees', 'Unlimited Support', 'QBO, Xero, Wave or Freshbooks', 'Setup & Training', 'A/R & A/P Processing', 'Additional Financial Reports']   
     },

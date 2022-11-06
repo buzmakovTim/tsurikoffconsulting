@@ -1,5 +1,6 @@
 import React from 'react'
 import { PriceType } from '../../state/State';
+import { PricingCard } from '../pricingCard/PricingCard';
 import './Pricing.scss';
 
 type SectionPropsType = {
@@ -9,19 +10,40 @@ type SectionPropsType = {
 export const Pricing = (props: SectionPropsType) => {
 
 
-  const pricing = props.pricing.map((value => {
+  const _monthlyRate = props.pricing.filter(value => value.rateType === 'Monthly Rate')
+  
+  const hourlyRate = props.pricing.filter(value => value.rateType === 'Hourly Rate')
+  const cashBasis = _monthlyRate.filter(value => value.category === 'Cash Basis')
+  const accrualBasis = _monthlyRate.filter(value => value.category === 'Accrual Basis')
+
+  const pricing = (v: PriceType[]) => v.map(value => {
     return(
       <>
-        <p>{value.rate}</p>
+        <PricingCard pricing={value}/>
       </>
     )
   })
-  )
 
 
     return (
-      <div className="outer-container">
-        {pricing}
+      <div>
+        <div>
+          Monthly Rate
+        </div>
+        
+        <div className="pricing-outer-container">
+          {pricing(cashBasis)}
+        </div>
+        <div className="pricing-outer-container">
+          {pricing(accrualBasis)}
+        </div>
+        
+        <div>
+          Hourly Rate
+        </div>
+        <div className="pricing-outer-container">
+          {pricing(hourlyRate)}
+        </div>
       </div>
     )
 }

@@ -1,27 +1,15 @@
-.outer-container{
+.pricing-outer-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     // background-color: aqua;
-    // justify-content: space-between;
 }
-.photo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 280px;
-    height: 350px;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-right: 50px;
-}
-.about{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 450px;
-    height: 250px;
-    border: 1px solid black;
-    border-radius: 10px;
-    // margin-right: 50px;
+@media screen and (max-width: 900px) {
+    .pricing-outer-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

@@ -1,0 +1,45 @@
+.card-container {
+    // width: 250px;
+    width: 30%;
+    // height: 250px;
+    // padding: 5px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-self: stretch;
+}
+
+.card-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s;
+}
+.bookCall{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pricing-title{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(161, 10, 48);
+    color: aliceblue;
+    h3{
+        margin: 0;
+    }
+}
+
+// Tablet
+@media screen and (max-width: 900px) {
+    .card-container{
+        width: 70%;
+        align-self: center;
+    }
+}
+
+// Mobile
+@media screen and (max-width: 600px) {
+    .card-container{
+        width: 90%;
+        align-self: center;
+    }
+}
