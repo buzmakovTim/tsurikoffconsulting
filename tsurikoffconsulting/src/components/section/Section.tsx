@@ -28,7 +28,7 @@ export const Section = (props: SectionPropsType) => {
         content = props.section.content.map((value => {
           return(
             <>
-              <h4>{value as string}</h4>
+              <li>{value as string}</li>
             </>
           )
         })
@@ -49,7 +49,11 @@ export const Section = (props: SectionPropsType) => {
           <h1>{props.section.title}</h1>
         </div>
         <div className='content'>
+         
          {renderContent()}
+         
+         
+
         </div>
       </div>
           

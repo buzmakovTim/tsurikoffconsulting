@@ -29,6 +29,26 @@ export const PricingCard = (props: PricingCardType) => {
         </div>
       )
     }
+    const sectionOne = () => {
+      if(props.pricing.sectionOne){
+        return(
+          <div className='sectionOne'>
+            {props.pricing.sectionOne}
+          </div>
+        )
+      } else return
+    }
+    const sectionTwo = () => {
+      if(props.pricing.sectionTwo){
+        return(
+          <div className='sectionTwo'>
+            {props.pricing.sectionTwo}
+          </div>
+        )
+      } else return
+    }
+
+
     const button = () => {
       return(
         <div className='bookCall'>
@@ -43,8 +63,10 @@ export const PricingCard = (props: PricingCardType) => {
         {props.pricing.title ? title() : ''}
         {props.pricing.rate ? rate() : ''}
         {props.pricing.prepaid ? prepaid() : ''}
-        {props.pricing.sectionOne ? props.pricing.sectionOne : ''}
-        {props.pricing.sectionTwo ? props.pricing.sectionTwo : ''}
+        {props.pricing.sectionOne ? sectionOne() : ''}
+        {props.pricing.sectionTwo ? sectionTwo() : ''}
+        {/* {props.pricing.sectionOne ? props.pricing.sectionOne : ''} */}
+        {/* {props.pricing.sectionTwo ? props.pricing.sectionTwo : ''} */}
         {button()}
       </div>
     )

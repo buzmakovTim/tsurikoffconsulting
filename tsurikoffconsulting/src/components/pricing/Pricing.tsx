@@ -26,7 +26,7 @@ export const Pricing = (props: SectionPropsType) => {
 
 
     return (
-      <div>
+      <div className="pricing-outer">
         <div>
           Monthly Rate
         </div>
