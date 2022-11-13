@@ -65,7 +65,7 @@ const pricingData: PriceType[] = [
         prepaid: 'Prepaid Annually or $270/mo',
         category: 'Accrual Basis',
         sectionOne: ['Up to 50 Transactions', 'Monthly Bookkeeping', 'Annual Financial Statements', 'Annual Financial Review', 'Monthly Bank and Credit Card Reconciliation', 'HST Filing'],
-        sectionTwo: ['Cloud Storage for Documents', 'Payroll Processing - Up to 2 Employees', 'Unlimited Support', 'QBO, Xero, Wave or Freshbooks', 'Setup & Training', '-', '-']   
+        sectionTwo: ['Cloud Storage for Documents', 'Payroll Processing - Up to 2 Employees', 'Unlimited Support', 'QBO, Xero, Wave or Freshbooks', 'Setup & Training']   
     },
     {
         title: 'GROWING',

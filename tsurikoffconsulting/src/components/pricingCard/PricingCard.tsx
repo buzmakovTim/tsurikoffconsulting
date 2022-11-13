@@ -2,6 +2,8 @@ import React from 'react'
 import { PriceType } from '../../state/State';
 import { Button } from '../button/button';
 import './PricingCard.scss';
+import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
+import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 
 type PricingCardType = {
   pricing: PriceType
@@ -26,24 +28,42 @@ export const PricingCard = (props: PricingCardType) => {
     const prepaid = () => {
       return(
         <div className='prepaid'>
-          {props.pricing.prepaid}
+          <LocalOfferOutlinedIcon fontSize="small" htmlColor="rgb(119, 119, 118)"/>
+          <p>
+            {props.pricing.prepaid}
+          </p>
         </div>
       )
     }
+
+    const sectionList = (v: string[]) => v.map(value => {
+      return(
+        <div className="section-list-container">
+          <CheckBoxOutlinedIcon fontSize="small" htmlColor="rgb(119, 119, 118)"/>
+          <p>
+          {value}
+        </p>
+        </div>
+        
+      )
+    })
+
     const sectionOne = () => {
       if(props.pricing.sectionOne){
         return(
           <div className='sectionOne'>
-            {props.pricing.sectionOne}
+            {sectionList(props.pricing.sectionOne)}
           </div>
         )
       } else return
     }
+
+
     const sectionTwo = () => {
       if(props.pricing.sectionTwo){
         return(
           <div className='sectionTwo'>
-            {props.pricing.sectionTwo}
+            {sectionList(props.pricing.sectionTwo)}
           </div>
         )
       } else return
