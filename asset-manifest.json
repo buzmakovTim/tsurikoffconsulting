@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/tsurikoffconsulting/static/css/main.9f7fbdcc.css",
-    "main.js": "/tsurikoffconsulting/static/js/main.b0d26212.js",
-    "static/js/787.fb3032c0.chunk.js": "/tsurikoffconsulting/static/js/787.fb3032c0.chunk.js",
+    "main.css": "/tsurikoffconsulting/static/css/main.8f99b3f8.css",
+    "main.js": "/tsurikoffconsulting/static/js/main.f57ce87c.js",
+    "static/js/787.4a089265.chunk.js": "/tsurikoffconsulting/static/js/787.4a089265.chunk.js",
+    "static/media/videoBg.mp4": "/tsurikoffconsulting/static/media/videoBg.69ae87be417d1c45c162.mp4",
     "static/media/logoWhite.png": "/tsurikoffconsulting/static/media/logoWhite.65452a384671a2776a5f.png",
     "index.html": "/tsurikoffconsulting/index.html",
     "static/media/arrow-up.svg": "/tsurikoffconsulting/static/media/arrow-up.9d3a86d6d43cc7d37110dce4d5417d0d.svg",
-    "main.9f7fbdcc.css.map": "/tsurikoffconsulting/static/css/main.9f7fbdcc.css.map",
-    "main.b0d26212.js.map": "/tsurikoffconsulting/static/js/main.b0d26212.js.map",
-    "787.fb3032c0.chunk.js.map": "/tsurikoffconsulting/static/js/787.fb3032c0.chunk.js.map"
+    "main.8f99b3f8.css.map": "/tsurikoffconsulting/static/css/main.8f99b3f8.css.map",
+    "main.f57ce87c.js.map": "/tsurikoffconsulting/static/js/main.f57ce87c.js.map",
+    "787.4a089265.chunk.js.map": "/tsurikoffconsulting/static/js/787.4a089265.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f7fbdcc.css",
-    "static/js/main.b0d26212.js"
+    "static/css/main.8f99b3f8.css",
+    "static/js/main.f57ce87c.js"
   ]
 }
