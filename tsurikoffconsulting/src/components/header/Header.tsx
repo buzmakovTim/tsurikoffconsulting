@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Header.scss'
 import logo from './../../img/logoWhite.png';
+import videoBg from '../../assets/videoBg.mp4';
 import { Nav } from './nav/Nav'
 import { Button } from '../button/button';
 
@@ -29,6 +30,8 @@ export const Header = () => {
 
     return (
         <div className="headerContainer">
+            <video src={videoBg} autoPlay loop muted></video>
+            <div className="overlay" />
             <div className={navbar ? "headerOpened" : "header"}>
                 <Nav />
             </div>
@@ -39,6 +42,7 @@ export const Header = () => {
             <div className="buttonClass">
                 <Button name="Book Introduction Call"/>
             </div>
+            
         </div>
         
     )

@@ -20,11 +20,9 @@
         
         p {
             // color: black;
-            
         }
     }
 }
-
 .button p {
     font-size: 90%;
     color: rgb(224, 224, 224);
@@ -33,4 +31,31 @@
     align-self: center;
     font-family: $primary-font;
     font-weight: 800;
+}
+
+.small{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: $color5;
+    border-radius: 5px;
+    transition: all 0.3s;
+    &:hover{
+        cursor: pointer;
+        background-color: $primary-color;
+        border: none;
+        width: 100px;
+        height: 30px;
+        transition: all 0.3s;
+        
+        p {
+            color: rgb(231, 231, 231);
+            transition: all 0.3s;
+        }
+    }
+    p {
+        color: rgb(67, 67, 67);
+        transition: all 0.3s;
+    }   
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { PriceType } from '../../state/State';
+import { Button } from '../button/button';
 import './PricingCard.scss';
 
 type PricingCardType = {
@@ -52,7 +53,7 @@ export const PricingCard = (props: PricingCardType) => {
     const button = () => {
       return(
         <div className='bookCall'>
-          <button>Book Call</button>
+          <Button name="Book Call" smallSize={true}/>
         </div>
       )
     }
