@@ -53,7 +53,7 @@ export const PricingCard = (props: PricingCardType) => {
     const button = () => {
       return(
         <div className='bookCall'>
-          <Button name="Book Call" smallSize={true}/>
+          <Button name="Free Consultation" smallSize={true}/>
         </div>
       )
     }
