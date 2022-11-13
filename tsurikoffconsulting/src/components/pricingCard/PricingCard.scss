@@ -1,3 +1,5 @@
+@import "./../../style/variables.scss";
+
 .card-container {
     // width: 250px;
     display: flex;
@@ -27,7 +29,7 @@
 .pricing-title{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: rgb(161, 10, 48);
+    background-color: $primary-color;
     color: aliceblue;
     h3{
         margin: 0;
