@@ -17,9 +17,13 @@
 }
 
 .card-container:hover {
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(255, 254, 254);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: all 0.3s;
+    .sectionOne{
+        background-color: rgb(250, 251, 255);
+        transition: all 0.3s;
+    }
 }
 .bookCall{
     display: flex;
@@ -60,9 +64,6 @@
     margin-bottom: 5px;
     margin-top: 5px;
     padding: 0 10px;
-    &:hover{
-        background-color: rgb(243, 247, 250);
-    }
     p {
         margin: 0;
         text-align: left;
