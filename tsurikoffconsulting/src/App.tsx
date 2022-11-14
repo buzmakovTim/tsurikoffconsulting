@@ -38,7 +38,7 @@ function App(props: AppPropsType) {
       </body>
 
       <footer className="footer">
-        This is footer
+        <p>Copyright © 2022 Tsurikoff Consulting. All rights reserved</p>
       </footer>
     </div>
   );

@@ -42,6 +42,14 @@ export const Section = (props: SectionPropsType) => {
       if(props.section.title === 'Pricing'){
         content = <Pricing pricing={props.section.content as PriceType[]}/>
       }
+
+      if(props.section.title === 'Contact Us'){
+        content = <>
+          <div className="contact-us">
+            <p>Contact Us</p>
+          </div>
+        </>
+      }
       
       return content
     }
@@ -56,14 +64,7 @@ export const Section = (props: SectionPropsType) => {
           <h1>{props.section.title}</h1>
         </div>
         <div className='content'>
-         
-         {/* <div> */}
-         {renderContent()}
-         {/* </div> */}
-         
-         
-         
-
+          {renderContent()}
         </div>
       </div>
           
